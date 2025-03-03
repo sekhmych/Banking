@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Olump2018.DepositPages.UserControls.DepositElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Olump2018.DepositPages"
+             mc:Ignorable="d" 
+             Height="300" Width="180"
+             d:DesignHeight="300" d:DesignWidth="180"
+             Background="#FF99CFFF">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Text="{Binding Title}" Margin="0,24,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="168" FontSize="18"></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Margin="0,161,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="168" FontSize="14"><Run Language="ru-ru" Text="Минимальный срок"/><LineBreak/><Run Language="ru-ru" Text="{Binding Period}"/></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Text="{Binding Bet}" Margin="0,245,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="168" FontSize="18" FontWeight="Bold"></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Text="{Binding Description}" Margin="0,94,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="168" FontSize="14"><Run Language="ru-ru" Text="Минимальный срок"/><LineBreak/><Run Language="ru-ru" Text="{Binding Period}"/></TextBlock>
+    </Grid>
+</UserControl>

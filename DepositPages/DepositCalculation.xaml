@@ -1,0 +1,36 @@
+﻿<Page x:Class="Olump2018.DepositPages.DepositCalculation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Olump2018"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Height="450" Width="800"
+      Background="AliceBlue"
+      Title="DepositCalculation">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="430" Margin="543,0,0,0" VerticalAlignment="Center" Width="247" Fill="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="559,26,0,0" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Top" Height="34" Width="216" FontSize="22"><Run Language="ru-ru" Text="Стабильный"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="567,56,0,0" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Top" Height="34" Width="208"><Run Language="ru-ru" Text="Доход по вкладу:"/></TextBlock>
+        <TextBlock x:Name="DepositIncomeStable" HorizontalAlignment="Left" Margin="559,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="38" FontSize="16"><Run Language="ru-ru" Text="4 925,00 Руб."/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="559,117,0,0" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Top" Height="34" Width="216" FontSize="22"><Run Language="ru-ru" Text="Оптимальный"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="567,147,0,0" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Top" Height="34" Width="208"><Run Language="ru-ru" Text="Доход по вкладу:"/></TextBlock>
+        <TextBlock x:Name="DepositIncomeOptimal" HorizontalAlignment="Left" Margin="559,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="38" FontSize="16"><Run Language="ru-ru" Text="4 925,00 Руб."/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="559,212,0,0" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Top" Height="34" Width="216" FontSize="22"><Run Language="ru-ru" Text="Стандарт"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="567,242,0,0" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Top" Height="34" Width="208"><Run Language="ru-ru" Text="Доход по вкладу:"/></TextBlock>
+        <TextBlock x:Name="DepositIncomeStandard" HorizontalAlignment="Left" Margin="559,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="38" FontSize="16"><Run Language="ru-ru" Text="4 925,00 Руб."/></TextBlock>
+        <Button Content="Сравнить параметры" HorizontalAlignment="Left" Margin="559,397,0,0" VerticalAlignment="Top" Width="216" Height="29" Foreground="White" Background="#FF19A5FF" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22"><Run Language="ru-ru" Text="Сумма"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="32,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22"><Run Language="ru-ru" Text="Срок"/></TextBlock>
+        <TextBox PreviewTextInput="TextBoxSum_PreviewTextInput" x:Name="TextBoxSum" HorizontalAlignment="Left" Margin="32,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" Height="38" FontSize="18" TextChanged="TextBoxSum_TextChanged"/>
+        <TextBox PreviewTextInput="TextBoxPeriod_PreviewTextInput" x:Name="TextBoxPeriod" HorizontalAlignment="Left" Margin="32,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" Height="38" FontSize="18" TextChanged="TextBoxPeriod_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="261,128,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="Руб." VerticalAlignment="Top" Height="36" Width="66" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="261,285,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="66" FontSize="16"><Run Language="ru-ru" Text="месяцев"/></TextBlock>
+
+    </Grid>
+</Page>

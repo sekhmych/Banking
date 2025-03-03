@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Olump2018", "Olump2018.csproj", "{54867FD1-F95C-4558-8B2F-AF436A23167E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankMind", "..\BankMind\BankMind.csproj", "{68110BAE-46BE-4CF4-9445-CB69A97F1380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankMindTests", "..\BankMindTests\BankMindTests.csproj", "{4B6CD80B-BC65-4C1B-ACC8-35FBF3FF6EA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54867FD1-F95C-4558-8B2F-AF436A23167E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54867FD1-F95C-4558-8B2F-AF436A23167E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54867FD1-F95C-4558-8B2F-AF436A23167E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54867FD1-F95C-4558-8B2F-AF436A23167E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68110BAE-46BE-4CF4-9445-CB69A97F1380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68110BAE-46BE-4CF4-9445-CB69A97F1380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68110BAE-46BE-4CF4-9445-CB69A97F1380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68110BAE-46BE-4CF4-9445-CB69A97F1380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B6CD80B-BC65-4C1B-ACC8-35FBF3FF6EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6CD80B-BC65-4C1B-ACC8-35FBF3FF6EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6CD80B-BC65-4C1B-ACC8-35FBF3FF6EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6CD80B-BC65-4C1B-ACC8-35FBF3FF6EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AE1E227-2520-4522-913C-A923B30DD93E}
+	EndGlobalSection
+EndGlobal
