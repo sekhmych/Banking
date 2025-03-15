@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище Olymp2018Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище Olymp2018Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BankAccount">
           <Key>
             <PropertyRef Name="NumberAccount" />
@@ -58,7 +58,7 @@
           <Property Name="Number" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Phone" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="Adress" Type="varchar" MaxLength="60" Nullable="false" />
-          <Property Name="Mail" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="EMail" Type="varchar" MaxLength="25" />
           <Property Name="DateOfIssue" Type="date" Nullable="false" />
           <Property Name="Issued" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="DateOfBirth" Type="date" Nullable="false" />
@@ -199,8 +199,7 @@
             <End Role="Type1" EntitySet="Type" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Olymp2018Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -270,7 +269,6 @@
           <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Adress" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Mail" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DateOfIssue" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Issued" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
@@ -278,6 +276,7 @@
           <NavigationProperty Name="BankAccounts" Relationship="Self.FK_BankAccount_User" FromRole="User" ToRole="BankAccount" />
           <NavigationProperty Name="BankAccounts1" Relationship="Self.FK_BankAccount_User1" FromRole="User" ToRole="BankAccount" />
           <NavigationProperty Name="Contracts" Relationship="Self.FK_Contract_User" FromRole="User" ToRole="Contract" />
+          <Property Name="EMail" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_BankAccount_BankAccount">
           <End Role="BankAccount" Type="Self.BankAccount" Multiplicity="1" />
@@ -466,6 +465,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="Olymp2018Model.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
                 <ScalarProperty Name="IDUser" ColumnName="IDUser" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
@@ -476,7 +476,6 @@
                 <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Adress" ColumnName="Adress" />
-                <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
                 <ScalarProperty Name="Issued" ColumnName="Issued" />
                 <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />

@@ -32,14 +32,13 @@ namespace Olump2018
     /// </summary>
     public partial class OperationsHistory : Page
     {
-        public OperationsHistory(String userId)
+        public OperationsHistory()
         {
             InitializeComponent();
-            this.UserId = userId;
             loadOperationsHistory();
         }
 
-        async public void loadOperationsHistory()
+        public void loadOperationsHistory()
         {
             ListHistory.ItemsSource = new List<HistoryOperationsItem>();
 
@@ -49,7 +48,7 @@ namespace Olump2018
 
                 var userAccounts = db.BankAccounts
                     .AsNoTracking()
-                    .Where(u => u.UserID.ToString() == this.UserId)
+                    .Where(u => u.UserID.ToString() == Global.userId)
                     .AsEnumerable();
 
                 foreach (var account in userAccounts)
@@ -75,6 +74,5 @@ namespace Olump2018
             }
         }
 
-        public String UserId { get; set; }
     }
 }

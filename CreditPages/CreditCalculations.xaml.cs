@@ -130,7 +130,8 @@ namespace Olump2018.CreditPages
                     float monthlyPayment = Calculations.MonthlyPaymentAmount(sum, this.percent, 12, period, initialPayment);
                     TextBoxMonthlyPayment.Text = monthlyPayment.ToString("N2") + " Руб.";
                     TextBoxOverPayment.Text = Calculations.CreditOverPayment(sum - initialPayment, Calculations.CreditTotal(monthlyPayment, period)).ToString("N2") + " Руб.";
-                    TextBlockPercent.Text = Calculations.CreditEffectPercent(sum - initialPayment, Calculations.CreditOverPayment(sum - initialPayment, Calculations.CreditTotal(monthlyPayment, period))).ToString();
+                    TextBlockPercent.Text = Calculations.CreditEffectPercent(Calculations.CreditOverPayment(sum - initialPayment, Calculations.CreditTotal(monthlyPayment, period)), sum - initialPayment).ToString() + " %";
+             
                     //TextBoxMonthlyPayment.Text = "Не рассчитывается";
                     //TextBoxOverPayment.Text = "Не рассчитывается";
                    
@@ -141,7 +142,7 @@ namespace Olump2018.CreditPages
 
                     
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     TextBoxMonthlyPayment.Text = "Не рассчитывается";
                     TextBoxOverPayment.Text = "Не рассчитывается";

@@ -53,7 +53,7 @@
     <Property Name="Number" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Phone" Type="varchar" MaxLength="11" Nullable="false" />
     <Property Name="Adress" Type="varchar" MaxLength="60" Nullable="false" />
-    <Property Name="Mail" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="EMail" Type="varchar" MaxLength="25" />
     <Property Name="DateOfIssue" Type="date" Nullable="false" />
     <Property Name="Issued" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="DateOfBirth" Type="date" Nullable="false" />

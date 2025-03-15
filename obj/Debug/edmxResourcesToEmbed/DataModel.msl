@@ -47,6 +47,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="Olymp2018Model.User">
         <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
           <ScalarProperty Name="IDUser" ColumnName="IDUser" />
           <ScalarProperty Name="Login" ColumnName="Login" />
           <ScalarProperty Name="Password" ColumnName="Password" />
@@ -57,7 +58,6 @@
           <ScalarProperty Name="Number" ColumnName="Number" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="Adress" ColumnName="Adress" />
-          <ScalarProperty Name="Mail" ColumnName="Mail" />
           <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
           <ScalarProperty Name="Issued" ColumnName="Issued" />
           <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />

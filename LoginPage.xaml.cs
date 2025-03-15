@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,11 +21,45 @@ namespace Olump2018
     /// </summary>
     public partial class LoginPage : Page
     {
+
+        public static bool IsUserLogged()
+        {
+            using(var db = new Olymp2018Entities())
+            {
+                var user = db.Users
+                    .AsNoTracking()
+                    .FirstOrDefault(u => u.Login == Global.login && u.Password == Global.password);
+
+                if (user != null)
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
+            }
+        }
+
         public LoginPage()
         {
             InitializeComponent();
+            if (IsUserLogged())
+            {
+                NavigationService.Navigate(new PersonalPage());
+            }
         }
 
+        public LoginPage(Page targetPage)
+        {
+            InitializeComponent();
+            this.targetPage = targetPage;
+            if (IsUserLogged())
+            {
+                NavigationService.Navigate(this.targetPage);
+            }
+        }
+
+        Page targetPage { get; set; }
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrEmpty(TextBoxLogin.Text) || String.IsNullOrEmpty(PasswordBox.Password)) {
@@ -44,7 +79,17 @@ namespace Olump2018
                     return;
                 } else if (user != null)
                 {
-                    NavigationService.Navigate(new PersonalPage((user.Name.Trim() + " " + user.Surname.Trim() + " " + user.Patronymic.Trim()), user.IDUser.ToString()));
+                    Global.userId = user.IDUser.ToString();
+                    Global.login = user.Login;
+                    Global.password = user.Password;
+
+                    if (this.targetPage != null)
+                    {
+                        NavigationService.Navigate(this.targetPage);
+                        return;
+                    }
+
+                    NavigationService.Navigate(new PersonalPage((user.Name.Trim() + " " + user.Surname.Trim() + " " + user.Patronymic.Trim())));
                 }
 
 

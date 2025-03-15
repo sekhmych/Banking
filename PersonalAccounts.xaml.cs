@@ -35,16 +35,14 @@ namespace Olump2018
 
     public partial class PersonalAccounts : Page
     {
-        public PersonalAccounts(String userId)
+        public PersonalAccounts()
         {
             InitializeComponent();
-            this.UserID = userId;
             loadUserAccounts();
         }
         
-        public String UserID { get; set; }
 
-        async public void loadUserAccounts()
+        public void loadUserAccounts()
         {
             ListAccounts.ItemsSource = new List<AccountItem>();
             using (var db = new Olymp2018Entities())
@@ -53,12 +51,14 @@ namespace Olump2018
 
                 var userAccount = db.BankAccounts
                     .AsNoTracking()
-                    .Where(u => u.UserID.ToString() == this.UserID)
+                    .Where(u => u.UserID.ToString() == Global.userId)
                     .AsEnumerable();
 
                 var accountType = db.Types
                     .AsNoTracking()
                     .AsEnumerable();
+
+
 
                 foreach (var account in userAccount)
                 {

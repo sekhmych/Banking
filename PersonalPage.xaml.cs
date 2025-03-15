@@ -28,15 +28,14 @@ namespace Olump2018
             InitializeComponent();
         }
 
-        public PersonalPage(String FIO, string userID)
+        public PersonalPage(String FIO)
         {
             InitializeComponent();
             this.DataContext = this;
             this.FIO = FIO;
-            this.UserID = userID;
 
-            personalAccounts = new PersonalAccounts(this.UserID);
-            operationsHistory = new OperationsHistory(this.UserID);
+            personalAccounts = new PersonalAccounts();
+            operationsHistory = new OperationsHistory();
 
             FillPersonName();
             PersonalFrame.Navigate(personalAccounts);
@@ -52,7 +51,6 @@ namespace Olump2018
         }
 
         public String FIO { get; set; }
-        public String UserID { get; set; }
 
         private void BtnPersonalAccounts_Click(object sender, RoutedEventArgs e)
         {

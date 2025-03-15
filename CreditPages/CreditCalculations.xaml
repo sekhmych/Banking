@@ -28,8 +28,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="261,56,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="Руб." VerticalAlignment="Top" Height="36" Width="66" FontSize="16"/>
         <TextBlock x:Name="TextBlockPeriodCompute" HorizontalAlignment="Left" Margin="261,104,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="66" FontSize="16" Grid.Row="1"><Run Language="ru-ru" Text="месяцев"/></TextBlock>
         <TextBlock x:Name="TextBlockDateFrom" HorizontalAlignment="Left" Margin="32,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Grid.Row="1"><Run Language="ru-ru" Text="Дата оформления кредита"/></TextBlock>
-        <TextBox x:Name="TextBoxDateFrom" HorizontalAlignment="Left" Margin="32,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" Height="38" FontSize="18" Grid.Row="1" />
-        <DatePicker HorizontalAlignment="Center" Margin="0,206,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <DatePicker HorizontalAlignment="Left" Margin="32,201,0,0" VerticalAlignment="Top" Grid.Row="1" Width="295" Height="36"/>
         <TextBlock HorizontalAlignment="Left" Margin="567,1,0,0" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Top" Height="34" Width="208" Grid.Row="1"><Run Language="ru-ru" Text="Эффективная процентная ставка"/></TextBlock>
         <TextBlock x:Name="TextBlockPercent" HorizontalAlignment="Left" Margin="559,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="38" FontSize="16" Grid.Row="1"><Run Language="ru-ru" Text="16,25 %"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="567,77,0,0" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Top" Height="34" Width="208" Grid.Row="1"><Run Language="ru-ru" Text="Переплата"/></TextBlock>

@@ -12,24 +12,25 @@
 
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="40,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Text="Стабиль"/><Run Language="ru-ru" Text="н"/><Run Text="ый"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="183,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="4 925,00 Руб."/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="353,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="659 100,00"/><Run Text=" Руб."/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="539,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="9,85%"/><Run Text=" Руб."/></TextBlock>
+        <TextBlock x:Name="StableMonthly" HorizontalAlignment="Left" Margin="183,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="4 925,00 Руб."/></TextBlock>
+        <TextBlock x:Name="StableTotal" HorizontalAlignment="Left" Margin="353,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="659 100,00"/><Run Text=" Руб."/></TextBlock>
+        <TextBlock x:Name="StablePercent" HorizontalAlignment="Left" Margin="539,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="9,85%"/><Run Text=" Руб."/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="40,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="Название"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="183,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="Месячный доход"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="353,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="Сумма к концу срока"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="539,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="1.212,0.566"><Run Language="ru-ru" Text="Ставка"/></TextBlock>
-        <Button Content="Открыть вклад" HorizontalAlignment="Left" Margin="653,151,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button x:Name="BtnMakeStable" Content="Открыть вклад" HorizontalAlignment="Left" Margin="653,151,0,0" VerticalAlignment="Top" Width="106" Click="BtnMakeStable_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="40,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="Оптимальный"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="183,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="4 925,00 Руб."/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="353,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="659 100,00"/><Run Text=" Руб."/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="539,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="9,85%"/><Run Text=" Руб."/></TextBlock>
-        <Button Content="Открыть вклад" HorizontalAlignment="Left" Margin="653,205,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBlock x:Name="OptimalMonthly" HorizontalAlignment="Left" Margin="183,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="4 925,00 Руб."/></TextBlock>
+        <TextBlock x:Name="OptimalTotal" HorizontalAlignment="Left" Margin="353,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="659 100,00"/><Run Text=" Руб."/></TextBlock>
+        <TextBlock x:Name="OptimalPercent" HorizontalAlignment="Left" Margin="539,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="9,85%"/><Run Text=" Руб."/></TextBlock>
+        <Button x:Name="BtnMakeOptimal" Content="Открыть вклад" HorizontalAlignment="Left" Margin="653,205,0,0" VerticalAlignment="Top" Width="106" Click="BtnMakeOptimal_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="40,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="Стандарт"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="183,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="4 925,00 Руб."/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="353,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="659 100,00"/><Run Text=" Руб."/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="539,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="9,85%"/><Run Text=" Руб."/></TextBlock>
-        <Button Content="Открыть вклад" HorizontalAlignment="Left" Margin="653,258,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBlock x:Name="StandardMonthly" HorizontalAlignment="Left" Margin="183,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="4 925,00 Руб."/></TextBlock>
+        <TextBlock x:Name="StandardTotal" HorizontalAlignment="Left" Margin="353,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="659 100,00"/><Run Text=" Руб."/></TextBlock>
+        <TextBlock x:Name="StandardPercent" HorizontalAlignment="Left" Margin="539,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"><Run Language="ru-ru" Text="9,85%"/><Run Text=" Руб."/></TextBlock>
+        <Button x:Name="BtnMakeStandard" Content="Открыть вклад" HorizontalAlignment="Left" Margin="653,258,0,0" VerticalAlignment="Top" Width="106" Click="BtnMakeStandard_Click"/>
+        <Button x:Name="Button_MakeDepositDocument" Content="Сформировать выписку" HorizontalAlignment="Center" Margin="0,379,0,0" VerticalAlignment="Top" Width="216" Height="26" Click="Button_Click"/>
 
     </Grid>
 </Page>

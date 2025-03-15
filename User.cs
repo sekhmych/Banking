@@ -32,11 +32,11 @@ namespace Olump2018
         public string Number { get; set; }
         public string Phone { get; set; }
         public string Adress { get; set; }
-        public string Mail { get; set; }
         public System.DateTime DateOfIssue { get; set; }
         public string Issued { get; set; }
         public System.DateTime DateOfBirth { get; set; }
         public string PlaceOfBirth { get; set; }
+        public string EMail { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BankAccount> BankAccounts { get; set; }
